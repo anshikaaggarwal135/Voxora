@@ -16,6 +16,19 @@
 </p>
 
 ---
+## 🌐 Live Demo
+
+🚀 **Try Voxora online:**
+
+**https://voxora-omega.vercel.app/**
+
+### 🔗 Project Links
+
+- 🌐 **Frontend:** https://voxora-omega.vercel.app/
+- ⚙️ **Backend API:** https://voxora-backend-ky1v.onrender.com
+- 💻 **GitHub Repository:** https://github.com/anshikaaggarwal135/Voxora
+
+---
 
 ## 🌟 About Voxora
 
@@ -76,6 +89,15 @@ Voxora uses a **React frontend**, **Python Flask backend**, and the **ElevenLabs
 |---|---|
 | 🤖 ElevenLabs API | Speech generation |
 | 🎵 MP3 | Generated audio format |
+
+---
+### ☁️ Deployment
+
+| Platform | Purpose |
+|---|---|
+| ▲ Vercel | React frontend hosting |
+| 🚀 Render | Flask backend hosting |
+| 🐙 GitHub | Source code and version control |
 
 ---
 
@@ -168,6 +190,7 @@ Voxora/
 
 ```
 ## 🔌 API Endpoints
+### ❤️ Health Check
 ```text
 GET /api/health
 ```
@@ -269,23 +292,77 @@ Frontend:
 ```text
 http://localhost:5173
 ```
+## ☁️ Production Deployment
 
-## 🧪 Validation & Error Handling
+Voxora is deployed as a full-stack application using separate frontend and backend services.
 
-Voxora handles several common errors:
+### Frontend — Vercel
 
-❌ Empty text
-❌ Text exceeding 5000 characters
-❌ Missing language
-❌ Missing voice
-❌ Invalid language
-❌ Invalid voice
-❌ Language mismatch
-❌ TTS API failures
-❌ Backend generation errors
+The React/Vite frontend is deployed on Vercel.
 
+🌐 Live application:
+```text
+https://voxora-omega.vercel.app/
+```
+### Backend — Render
+
+The Flask backend is deployed on Render.
+
+⚙️ Backend:
+```text
+https://voxora-backend-ky1v.onrender.com
+```
+## Production Flow
+```text
+Vercel
+  │
+  │ HTTPS API Request
+  ▼
+Render
+  │
+  │ API Request
+  ▼
+ElevenLabs
+  │
+  │ Generated MP3
+  ▼
+Render
+  │
+  ▼
+Vercel → Audio Player
+```
+## 🧪 Testing & Validation
+Tested Features
+```text
+✅ Empty text validation
+✅ 5000-character limit
+✅ Word counter
+✅ Character counter
+✅ Language selection
+✅ Voice selection
+✅ Language mismatch validation
+✅ Speech generation
+✅ Audio playback
+✅ Audio download
+✅ Clear text
+✅ New Speech functionality
+✅ Backend health endpoint
+✅ Voice API endpoint
+✅ Production frontend-to-backend communication
+✅ Production speech generation
+```
 Users receive clear error messages through the interface.
+## Production API Test
 
+The /api/tts endpoint was tested with:
+```text
+{
+  "text": "Hello.",
+  "language": "en-US",
+  "voice": "Sarah - Female"
+}
+```
+The backend successfully generated an MP3 response.
 ## 🎯 Application Flow
 ```text
 📝 Enter Text
@@ -305,6 +382,31 @@ Users receive clear error messages through the interface.
 ⬇️ Download Audio
 
 ```
+## 🛡️ Validation & Error Handling
+
+Voxora handles several common errors:
+```text
+❌ Empty text
+
+❌ Text exceeding 5000 characters
+
+❌ Missing language
+
+❌ Missing voice
+
+❌ Invalid language
+
+❌ Invalid voice
+
+❌ Language mismatch
+
+❌ Language detection failure
+
+❌ TTS API failures
+
+❌ Backend generation errors
+```
+Users receive clear error messages through the interface.
 ## 🔮 Future Improvements
 Some possible future enhancements include:
 
@@ -318,19 +420,7 @@ Some possible future enhancements include:
 📱 Improved mobile experience
 ☁️ Production deployment
 🗂️ Saved audio library
-📸 Screenshots
 
-Screenshots of the application can be added here:
-
-Coming soon...
-
-For example:
-
-🏠 Main interface
-🌍 Language selection
-🎙️ Voice selection
-🔊 Generated speech
-🎧 Audio player
 
 ## 🔐 Security
 
@@ -345,9 +435,35 @@ and excluded from GitHub using:
 backend/.env
 ```
 in .gitignore.
+## 🎓 Learning Outcomes
 
+Through this project, the following concepts were practiced:
+```text
+React frontend development
+Component-based UI development
+REST API communication
+Flask backend development
+API request and response handling
+Third-party API integration
+Text-to-Speech technology
+Language detection
+Input validation
+Error handling
+Environment variable management
+Git and GitHub
+Postman API testing
+Vercel deployment
+Render deployment
+Full-stack application architecture
+```
 ## 👩‍💻 Author
 
 Anshika Aggarwal
 
 💻 Web Developer | 🐍 Python Learner | 🧩 DSA Enthusiast
+
+<p align="center">
+
+<strong>🎙️ Voxora — Give Your Words a Voice.</strong>
+
+</p> ```
