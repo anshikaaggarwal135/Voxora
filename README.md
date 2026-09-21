@@ -1,6 +1,6 @@
-# Text-to-Speech Application
+# Voxora — Text-to-Speech Application
 
-A web-based Text-to-Speech application that converts written text into natural-sounding speech using a React frontend, Python Flask backend, and ElevenLabs Text-to-Speech API.
+Voxora is a web-based Text-to-Speech application that converts written text into natural-sounding speech using a React frontend, Python Flask backend, and ElevenLabs Text-to-Speech API.
 
 ## Features
 
