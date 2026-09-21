@@ -197,19 +197,19 @@ def generate_audio(text, language, voice):
 
     filename = f"{uuid.uuid4()}.mp3"
 
-output_dir = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)),
-    "generated_audio"
-)
+    output_dir = os.path.join(
+        os.path.dirname(os.path.dirname(__file__)),
+        "generated_audio"
+    )
 
-os.makedirs(output_dir, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
 
-output_path = os.path.join(output_dir, filename)
+    output_path = os.path.join(output_dir, filename)
 
-with open(output_path, "wb") as audio_file:
+    with open(output_path, "wb") as audio_file:
 
-        for chunk in audio:
-            if chunk:
-                audio_file.write(chunk)
+            for chunk in audio:
+                if chunk:
+                    audio_file.write(chunk)
 
     return filename
