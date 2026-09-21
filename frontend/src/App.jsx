@@ -92,7 +92,6 @@ function App() {
     }
 
     setLoading(true);
-    setIsGenerating(true);
     try {
       const response = await fetch(
          "https://voxora-backend-ky1v.onrender.com/api/tts",
@@ -129,7 +128,6 @@ function App() {
       );
     } finally {
       setLoading(false);
-      setIsGenerating(false);
     }
   };
   const resetSpeech = () => {
@@ -137,7 +135,6 @@ function App() {
     setAudioUrl("");
     setError("");
     setLoading(false);
-    setIsGenerating(false);
     setIsTyping(false);
   };
   return (
