@@ -1,74 +1,353 @@
-# Voxora — Text-to-Speech Application
+# 🎙️ Voxora — Text-to-Speech Application
 
-Voxora is a web-based Text-to-Speech application that converts written text into natural-sounding speech using a React frontend, Python Flask backend, and ElevenLabs Text-to-Speech API.
+<p align="center">
+  <strong>✨ Turn your words into natural-sounding speech ✨</strong>
+</p>
 
-## Features
+<p align="center">
+  A modern web-based Text-to-Speech application built with React, Flask and ElevenLabs.
+</p>
 
-- Convert text into natural-sounding speech
-- Support for multiple languages
-- Multiple voice options
-- Automatic text language detection
-- Language mismatch validation
-- Maximum text limit of 5000 characters
-- Character and word counter
-- Speech generation status indicator
-- Audio playback directly in the browser
-- Download generated audio
-- Clear text option
-- New Speech option
-- Responsive design for different screen sizes
-- Secure API key handling using environment variables
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18+-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Flask-Backend-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+  <img src="https://img.shields.io/badge/ElevenLabs-TTS-8B5CF6?style=for-the-badge" alt="ElevenLabs">
+</p>
 
-## Technologies Used
+---
 
-### Frontend
+## 🌟 About Voxora
 
-- React
-- Vite
-- JavaScript
-- HTML
-- CSS
+**Voxora** is a web-based Text-to-Speech application that converts written text into natural-sounding speech.
 
-### Backend
+The application provides a simple and modern interface where users can enter text, select a language and voice, generate speech, listen to the generated audio, and download it.
 
-- Python
-- Flask
-- Flask-CORS
+Voxora uses a **React frontend**, **Python Flask backend**, and the **ElevenLabs Text-to-Speech API** to generate high-quality speech.
 
-### Text-to-Speech
+---
 
-- ElevenLabs API
+## ✨ Features
 
-### Additional Python Libraries
+- 📝 **Text Input** — Enter or paste text easily
+- 🔢 **Character Counter** — Track up to 5000 characters
+- 📊 **Word Counter** — See the number of words instantly
+- 📈 **Character Progress Bar** — Visual indication of text usage
+- 🌍 **Multiple Languages** — English, Hindi, Gujarati, Marathi, Spanish, French and German
+- 🎙️ **Multiple Voices** — Choose from available ElevenLabs voices
+- 🧠 **Language Detection** — Detects the language of entered text
+- ⚠️ **Language Validation** — Prevents mismatched language selection
+- 🔊 **Text-to-Speech Generation** — Convert text into speech
+- 🎧 **Audio Playback** — Listen directly in the browser
+- ⬇️ **Audio Download** — Download generated speech as MP3
+- 🧹 **Clear Text** — Quickly clear the text area
+- 🔄 **New Speech** — Start a fresh conversion
+- ⏳ **Generation Status** — Visual feedback while speech is being generated
+- 📱 **Responsive Design** — Works across desktop and smaller screens
+- 🔐 **Secure API Key Handling** — API credentials are stored using environment variables
 
-- python-dotenv
-- langdetect
-- uuid
+---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+### 🎨 Frontend
+
+| Technology | Purpose |
+|---|---|
+| ⚛️ React | User interface |
+| ⚡ Vite | Development/build tool |
+| 🟨 JavaScript | Application logic |
+| 🎨 CSS | Styling and responsive design |
+| 🌐 HTML | Page structure |
+
+### ⚙️ Backend
+
+| Technology | Purpose |
+|---|---|
+| 🐍 Python | Backend programming |
+| 🌶️ Flask | REST API |
+| 🔗 Flask-CORS | Frontend-backend communication |
+| 🔎 LangDetect | Language detection |
+| 🔐 python-dotenv | Environment variable management |
+
+### 🔊 Text-to-Speech
+
+| Technology | Purpose |
+|---|---|
+| 🤖 ElevenLabs API | Speech generation |
+| 🎵 MP3 | Generated audio format |
+
+---
+
+## 🏗️ How Voxora Works
 
 ```text
-Text_to_speech/
+                 ┌─────────────────────┐
+                 │      👤 User        │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   ⚛️ React Frontend │
+                 │                     │
+                 │  Text + Language   │
+                 │  + Voice Selection │
+                 └──────────┬──────────┘
+                            │
+                         HTTP POST
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   🌶️ Flask Backend  │
+                 │                     │
+                 │   Validation        │
+                 │   Language Check    │
+                 │   API Processing    │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │ 🤖 ElevenLabs API   │
+                 │                     │
+                 │  Text → Speech     │
+                 └──────────┬──────────┘
+                            │
+                         MP3 Audio
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │   🎧 Audio Player   │
+                 │                     │
+                 │   ▶️ Listen         │
+                 │   ⬇️ Download       │
+                 └─────────────────────┘
+
+```
+## 📁 Project Structure
+
+```text
+Voxora/
 │
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── ...
-│   ├── package.json
-│   └── ...
+├── 📁 frontend/
+│   ├── 📁 src/
+│   │   ├── 📄 App.jsx
+│   │   ├── 🎨 App.css
+│   │   └── 📄 ...
+│   ├── 📄 package.json
+│   └── 📄 ...
 │
-├── backend/
-│   ├── routes/
-│   │   └── tts_routes.py
+├── 📁 backend/
+│   ├── 📁 routes/
+│   │   └── 📄 tts_routes.py
 │   │
-│   ├── services/
-│   │   └── tts_service.py
+│   ├── 📁 services/
+│   │   └── 📄 tts_service.py
 │   │
-│   ├── generated_audio/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── .env
+│   ├── 📁 generated_audio/
+│   ├── 📄 app.py
+│   ├── 📄 requirements.txt
+│   └── 🔐 .env
 │
-├── .gitignore
-└── README.md
+├── 📄 .gitignore
+└── 📄 README.md
+
+```
+🔐 The .env, virtual environment, generated audio and other unnecessary files are excluded from Git using .gitignore.
+
+## 🌍 Supported Languages
+```text
+| Language | Code    | Icon |
+| -------- | ------- | ---- |
+| English  | `en-US` | 🇬🇧 |
+| Hindi    | `hi-IN` | 🇮🇳 |
+| Gujarati | `gu-IN` | 🇮🇳 |
+| Marathi  | `mr-IN` | 🇮🇳 |
+| Spanish  | `es-ES` | 🇪🇸 |
+| French   | `fr-FR` | 🇫🇷 |
+| German   | `de-DE` | 🇩🇪 |
+
+```
+## 🔌 API Endpoints
+```text
+GET /api/health
+```
+
+Response:
+```text
+{
+  "status": "ok"
+}
+```
+## 🎙️ Get Available Voices
+```text
+🎙️ Get Available Voices
+```
+Response:
+```text
+{
+  "success": true,
+  "voices": [
+    "Sarah - Female",
+    "George - Male"
+  ]
+}
+```
+
+## 🔊 Generate Speech
+```text
+POST /api/tts
+```
+Request:
+```text
+{
+  "text": "Hello, welcome to Voxora.",
+  "language": "en-US",
+  "voice": "Sarah - Female"
+}
+```
+Successful response:
+```text
+{
+  "success": true,
+  "message": "Speech generated successfully",
+  "audio_url": "/audio/generated-file.mp3"
+}
+```
+## 🚀 Getting Started
+### 📥 1. Clone the Repository
+```text
+git clone https://github.com/anshikaaggarwal135/Voxora.git
+cd Voxora
+```
+
+### 🐍 2. Setup the Backend
+
+Navigate to the backend:
+```text
+cd backend
+```
+Create a virtual environment:
+```text
+python -m venv venv
+```
+Activate it on Windows:
+```text
+venv\Scripts\activate
+```
+Install dependencies:
+```text
+pip install -r requirements.txt
+```
+
+
+### ▶️ 3. Start the Flask Backend
+
+From the backend directory:
+```text
+python app.py
+```
+Backend:
+```text
+http://127.0.0.1:5000
+```
+
+### ⚛️ 4. Start the React Frontend
+
+Open another terminal:
+```text
+cd frontend
+```
+Install dependencies:
+```text
+npm install
+```
+Start the development server:
+```text
+npm run dev
+```
+Frontend:
+```text
+http://localhost:5173
+```
+
+## 🧪 Validation & Error Handling
+
+Voxora handles several common errors:
+
+❌ Empty text
+❌ Text exceeding 5000 characters
+❌ Missing language
+❌ Missing voice
+❌ Invalid language
+❌ Invalid voice
+❌ Language mismatch
+❌ TTS API failures
+❌ Backend generation errors
+
+Users receive clear error messages through the interface.
+
+## 🎯 Application Flow
+```text
+📝 Enter Text
+      ↓
+🌍 Select Language
+      ↓
+🎙️ Select Voice
+      ↓
+🔍 Validate Input
+      ↓
+🧠 Detect Language
+      ↓
+🔊 Generate Speech
+      ↓
+🎧 Play Audio
+      ↓
+⬇️ Download Audio
+
+```
+## 🔮 Future Improvements
+Some possible future enhancements include:
+
+👤 User authentication
+🕘 Speech generation history
+💾 Cloud audio storage
+🎚️ Speech speed control
+🎛️ Voice customization
+🔊 Voice preview
+🌎 Additional languages
+📱 Improved mobile experience
+☁️ Production deployment
+🗂️ Saved audio library
+📸 Screenshots
+
+Screenshots of the application can be added here:
+
+Coming soon...
+
+For example:
+
+🏠 Main interface
+🌍 Language selection
+🎙️ Voice selection
+🔊 Generated speech
+🎧 Audio player
+
+## 🔐 Security
+
+Voxora keeps sensitive credentials outside the source code.
+
+The ElevenLabs API key is stored in:
+```text
+backend/.env
+```
+and excluded from GitHub using:
+```text
+backend/.env
+```
+in .gitignore.
+
+## 👩‍💻 Author
+
+Anshika Aggarwal
+
+💻 Web Developer | 🐍 Python Learner | 🧩 DSA Enthusiast
