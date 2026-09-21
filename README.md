@@ -333,24 +333,24 @@ Vercel → Audio Player
 ```
 ## 🧪 Testing & Validation
 Tested Features
-```text
-✅ Empty text validation
-✅ 5000-character limit
-✅ Word counter
-✅ Character counter
-✅ Language selection
-✅ Voice selection
-✅ Language mismatch validation
-✅ Speech generation
-✅ Audio playback
-✅ Audio download
-✅ Clear text
-✅ New Speech functionality
-✅ Backend health endpoint
-✅ Voice API endpoint
-✅ Production frontend-to-backend communication
-✅ Production speech generation
-```
+
+- ✅ Empty text validation
+- ✅ 5000-character limit
+- ✅ Word counter
+- ✅ Character counter
+- ✅ Language selection
+- ✅ Voice selection
+- ✅ Language mismatch validation
+- ✅ Speech generation
+- ✅ Audio playback
+- ✅ Audio download
+- ✅ Clear text
+- ✅ New Speech functionality
+- ✅ Backend health endpoint
+- ✅ Voice API endpoint
+- ✅ Production frontend-to-backend communication
+- ✅ Production speech generation
+
 Users receive clear error messages through the interface.
 ## Production API Test
 
@@ -385,41 +385,41 @@ The backend successfully generated an MP3 response.
 ## 🛡️ Validation & Error Handling
 
 Voxora handles several common errors:
-```text
-❌ Empty text
 
-❌ Text exceeding 5000 characters
+- ❌ Empty text
 
-❌ Missing language
+- ❌ Text exceeding 5000 characters
 
-❌ Missing voice
+- ❌ Missing language
 
-❌ Invalid language
+- ❌ Missing voice
 
-❌ Invalid voice
+- ❌ Invalid language
 
-❌ Language mismatch
+- ❌ Invalid voice
 
-❌ Language detection failure
+- ❌ Language mismatch
 
-❌ TTS API failures
+- ❌ Language detection failure
 
-❌ Backend generation errors
-```
+- ❌ TTS API failures
+
+- ❌ Backend generation errors
+
 Users receive clear error messages through the interface.
 ## 🔮 Future Improvements
 Some possible future enhancements include:
 
-👤 User authentication
-🕘 Speech generation history
-💾 Cloud audio storage
-🎚️ Speech speed control
-🎛️ Voice customization
-🔊 Voice preview
-🌎 Additional languages
-📱 Improved mobile experience
-☁️ Production deployment
-🗂️ Saved audio library
+- 👤 User authentication
+- 🕘 Speech generation history
+- 💾 Cloud audio storage
+- 🎚️ Speech speed control
+- 🎛️ Voice customization
+- 🔊 Voice preview
+- 🌎 Additional languages
+- 📱 Improved mobile experience
+- ☁️ Production deployment
+- 🗂️ Saved audio library
 
 
 ## 🔐 Security
@@ -438,24 +438,24 @@ in .gitignore.
 ## 🎓 Learning Outcomes
 
 Through this project, the following concepts were practiced:
-```text
-React frontend development
-Component-based UI development
-REST API communication
-Flask backend development
-API request and response handling
-Third-party API integration
-Text-to-Speech technology
-Language detection
-Input validation
-Error handling
-Environment variable management
-Git and GitHub
-Postman API testing
-Vercel deployment
-Render deployment
-Full-stack application architecture
-```
+
+- React frontend development
+- Component-based UI development
+- REST API communication
+- Flask backend development
+- API request and response handling
+- Third-party API integration
+- Text-to-Speech technology
+- Language detection
+- Input validation
+- Error handling
+- Environment variable management
+- Git and GitHub
+- Postman API testing
+- Vercel deployment
+- Render deployment
+- Full-stack application architecture
+
 ## 👩‍💻 Author
 
 Anshika Aggarwal
