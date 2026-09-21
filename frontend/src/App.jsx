@@ -50,7 +50,7 @@ function App() {
     const fetchVoices = async () => {
       try {
         const response = await fetch(
-          "http://127.0.0.1:5000/api/voices"
+          "https://voxora-backend-ky1v.onrender.com/api/voices"
         );
 
         const data = await response.json();
@@ -95,7 +95,7 @@ function App() {
     setIsGenerating(true);
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/tts",
+         "https://voxora-backend-ky1v.onrender.com/api/tts",
         {
           method: "POST",
           headers: {
@@ -118,7 +118,7 @@ function App() {
       }
 
       const fullAudioUrl =
-        `http://127.0.0.1:5000${data.audio_url}`;
+        `https://voxora-backend-ky1v.onrender.com${data.audio_url}`;
 
       setAudioUrl(fullAudioUrl);
 
